@@ -3,83 +3,177 @@
     <title>Graderaide</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" type="text/css" rel="stylesheet">
   </head>
-
   <body>
     <section class="app">
-      <section class="new-student-input">
-        <h1>New Student</h1>
-        <label for="new-student-name">Student Name</label>
-        <input type="text" class="new-student-name" name="new-student-name">
-        <label for="new-student-course">Course</label>
-        <input type="text" class="new-student-course" name="new-student-course">
-        <label for="new-student-term">Term</label>
-        <select class="new-student-term" name="new-student-term">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
+      <section class="new-student">
+        <section class="new-student-header">
+          <h1>New Student</h1>
+        </section>
+        <section class="new-student-input-parent">
+          <section class="new-student-input-child">
+            <label for="new-student-name">Student Name</label>
+            <input type="text" class="new-student-name" name="new-student-name">
+          </section>
+          <section class="new-student-input-child">
+            <label for="new-student-course">Course</label>
+            <input type="text" class="new-student-course" name="new-student-course">
+          </section>
+          <section class="new-student-input-child">
+            <label for="new-student-term">Term</label>
+            <select class="new-student-term" name="new-student-term">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </section>
+        </section>
+        <section class="new-student-submit">
+          <button type="submit" class="new-student-button">Create New Student</button>
+        </section>
       </section>
-      <section class="new-student-submit">
-        <button type="submit" class="new-student-button">Create New Student</button>
-      </section>
-
       <section class="student-display">
-        <ul class="student-info">
-          <li>Name: Colin</li>
-          <li>Course: WDI</li>
-          <li>Term: 1</li>
-          <li>
-            <select class="course-selection">
-              <option value="wdi">WDI</option>
-            </select>
-            <p>No grades yet.</p>
-          </li><button>Add new course, term, or grade.</button>
-        </ul>
-        <ul class="student-info">
-          <li>Name: Mesuara</li>
-          <li>Course: WDI</li>
-          <li>Term: 1</li>
-          <li>
-            <select class="course-selection">
-              <option value="wdi">WDI</option>
-            </select>
-            <p>No grades yet.</p>
-          </li><button>Add new course, term, or grade.</button>
-        </ul>
-        <ul class="student-info">
-          <li>Name: Genghis</li>
-          <li>Course: Python</li>
-          <li>Term: 1</li>
-          <li>
-            <select class="course-selection">
-              <option value="python">Python</option>
-            </select>
-            <p>No grades yet.</p>
-          </li><button>Add new course, term, or grade.</button>
-        </ul>
-        <ul class="student-info">
-          <li>Name: Tenzin</li>
-          <li>Course: Python</li>
-          <li>Term: 1</li>
-          <li>
-            <select class="course-selection">
-              <option value="python">Python</option>
-            </select>
-            <p>No grades yet.</p>
-          </li><button>Add new course, term, or grade.</button>
-        </ul>
-        <ul class="student-info">
-          <li>Name: JD</li>
-          <li>Course: WDI</li>
-          <li>Term: 1</li>
-          <li>
-            <select class="course-selection">
-              <option value="wdi">WDI</option>
-            </select>
-            <p>No grades yet.</p>
-          </li><button>Add new course, term, or grade.</button>
-        </ul>
+        <section class="student">
+          <ul class="student-info">
+            <li>Name: Colin</li>
+            <li>Course: 
+              <select class="course-selection">
+                <option value="wdi">WDI</option>
+              </select>
+            </li>
+            <li>Term: 
+              <select class="term-selection">
+                <option value="1">1</option>
+              </select>
+            </li>
+            <li>Grade: No grade yet</li>
+          </ul>
+          <section class="course-btns">
+            <button class="add-course-btn" onclick="window.location.href='add.html'">
+              Add Course
+            </button>
+            <button class="edit-course-btn" onclick="window.location.href='edit.html'">
+              Edit Course
+            </button>
+          </section>
+          <section class="course-btns">
+            <button class="remove-course-btn">Remove Course</button>
+            <button class="delete-student-btn">Delete Student</button>
+          </section>
+        </section>
+        <section class="student">
+          <ul class="student-info">
+            <li>Name: Mesuara</li>
+            <li>Course: 
+              <select class="course-selection">
+                <option value="wdi">WDI</option>
+              </select>
+            </li>
+            <li>Term: 
+              <select class="term-selection">
+                <option value="1">1</option>
+              </select>
+            </li>
+            <li>Grade: No grade yet</li>
+          </ul>
+          <section class="course-btns">
+            <button class="add-course-btn" onclick="window.location.href='add.html'">
+              Add Course
+            </button>
+            <button class="edit-course-btn" onclick="window.location.href='edit.html'">
+              Edit Course
+            </button>
+          </section>
+          <section class="course-btns">
+            <button class="remove-course-btn">Remove Course</button>
+            <button class="delete-student-btn">Delete Student</button>
+          </section>
+        </section>
+        <section class="student">
+          <ul class="student-info">
+            <li>Name: Genghis</li>
+            <li>Course: 
+              <select class="course-selection">
+                <option value="python">Python</option>
+              </select>
+            </li>
+            <li>Term: 
+              <select class="term-selection">
+                <option value="1">1</option>
+              </select>
+            </li>
+            <li>Grade: No grade yet</li>
+          </ul>
+          <section class="course-btns">
+            <button class="add-course-btn" onclick="window.location.href='add.html'">
+              Add Course
+            </button>
+            <button class="edit-course-btn" onclick="window.location.href='edit.html'">
+              Edit Course
+            </button>
+          </section>
+          <section class="course-btns">
+            <button class="remove-course-btn">Remove Course</button>
+            <button class="delete-student-btn">Delete Student</button>
+          </section>
+        </section>
+        <section class="student">
+          <ul class="student-info">
+            <li>Name: Tenzin</li>
+            <li>Course: 
+              <select class="course-selection">
+                <option value="python">Python</option>
+              </select>
+            </li>
+            <li>Term: 
+              <select class="term-selection">
+                <option value="1">1</option>
+              </select>
+            </li>
+            <li>Grade: No grade yet</li>
+          </ul>
+          <section class="course-btns">
+            <button class="add-course-btn" onclick="window.location.href='add.html'">
+              Add Course
+            </button>
+            <button class="edit-course-btn" onclick="window.location.href='edit.html'">
+              Edit Course
+            </button>
+          </section>
+          <section class="course-btns">
+            <button class="remove-course-btn">Remove Course</button>
+            <button class="delete-student-btn">Delete Student</button>
+          </section>
+        </section>
+        <section class="student">
+          <ul class="student-info">
+            <li>Name: JD</li>
+            <li>Course: 
+              <select class="course-selection">
+                <option value="wdi">WDI</option>
+              </select>
+            </li>
+            <li>Term: 
+              <select class="term-selection">
+                <option value="1">1</option>
+              </select>
+            </li>
+            <li>Grade: No grade yet</li>
+          </ul>
+          <section class="course-btns">
+            <button class="add-course-btn" onclick="window.location.href='add.html'">
+              Add Course
+            </button>
+            <button class="edit-course-btn" onclick="window.location.href='edit.html'">
+              Edit Course
+            </button>
+          </section>
+          <section class="course-btns">
+            <button class="remove-course-btn">Remove Course</button>
+            <button class="delete-student-btn">Delete Student</button>
+          </section>
+        </section>
       </section>
     </section>
   </body>
